@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="populationSurvey">
+<head>
+  <title>World Population Visualization</title>
+
+  <link rel="stylesheet" type="text/css" href="bower_components/angular-chart.js/dist/angular-chart.css">
+</head>
+<body ng-controller="PopulationController as populationCtrl" ng-init="populationCtrl.init()">
+
+  <input type="text" ng-model="year" placeholder="Minimum Year">
+  <button  ng-click="getPopulation(year)">Get Population</button>
+  <canvas id="line" class="chart chart-line" chart-data="populationCtrl.data"
+  chart-labels="populationCtrl.labels" chart-legend="true" chart-series="populationCtrl.series"
+  height="261" width="523" style="width: 523px; height: 261px;">
+</canvas> 
+
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/Chart.js/Chart.js"></script>
+  <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+  
+  <script src="app/app.js"></script>
+  <script src="app/services/apiservices.js"></script>
+  <script src="app/controllers/PopulationCtrl.js"></script>
+</body>
+</html>
