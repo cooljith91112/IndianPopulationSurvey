@@ -2,7 +2,9 @@
   'use strict';
 
   angular.module('populationSurvey',[
-        'chart.js'
+        'chart.js',
+        'ui.router',
+        'rzModule'
     ]);
 
 })();

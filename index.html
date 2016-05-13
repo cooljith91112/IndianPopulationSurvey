@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html ng-app="populationSurvey">
+
 <head>
   <title>World Population Visualization</title>
-
+  <link rel="stylesheet" href="bower_components/primer-css/css/primer.css" type="text/css" />
   <link rel="stylesheet" type="text/css" href="bower_components/angular-chart.js/dist/angular-chart.css">
+  <link rel="stylesheet" href="bower_components/angularjs-slider/dist/rzslider.css" type="text/css" />
+  <link rel="stylesheet" href="css/styles.css" type="text/css" />
 </head>
-<body ng-controller="PopulationController as populationCtrl" ng-init="populationCtrl.init()">
 
-  <input type="text" ng-model="year" placeholder="Minimum Year">
-  <button  ng-click="getPopulation(year)">Get Population</button>
-  <canvas id="line" class="chart chart-line" chart-data="populationCtrl.data"
-  chart-labels="populationCtrl.labels" chart-legend="true" chart-series="populationCtrl.series"
-  height="261" width="523" style="width: 523px; height: 261px;">
-</canvas> 
+<body>
+
+  <div class="container" ui-view></div>
 
 
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/Chart.js/Chart.js"></script>
+  <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
-  
+  <script src="bower_components/angularjs-slider/dist/rzslider.min.js"></script>
+
   <script src="app/app.js"></script>
+  <script src="app/router.config.js"></script>
   <script src="app/services/apiservices.js"></script>
   <script src="app/controllers/PopulationCtrl.js"></script>
+  <script src="app/controllers/WorldPopulationCtrl.js"></script>
+  <script src="app/controllers/CountryPopulationCtrl.js"></script>
 </body>
+
 </html>

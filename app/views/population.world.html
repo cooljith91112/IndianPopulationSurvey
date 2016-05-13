@@ -1,0 +1,18 @@
+<div ng-init="worldPopulationCtrl.init()">
+    <form>
+        <dl class="form-group">
+            <!--<input class="form-control" type="text" ng-model="year" placeholder="Minimum Year">-->
+            <dt><label>Select a range of years</label></dt>
+            <rzslider rz-slider-model="worldPopulationCtrl.slider.minValue"
+                rz-slider-high="worldPopulationCtrl.slider.maxValue"
+                rz-slider-options="worldPopulationCtrl.slider.options">
+            </rzslider>
+        </dl>
+        <div class="form-actions">
+            <dl class="form-group">
+                <button class="btn"  ng-click="worldPopulationCtrl.getPopulation()">Get Population</button>
+            </dl>
+        </div>
+    </form>
+    <canvas id="line" class="chart chart-line" chart-data="worldPopulationCtrl.data" chart-labels="worldPopulationCtrl.labels" chart-legend="true" chart-series="worldPopulationCtrl.series" ></canvas>
+</div>

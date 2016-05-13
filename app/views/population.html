@@ -1,0 +1,9 @@
+<div class="columns container-fix">
+      <div class="tabnav">
+        <nav class="tabnav-tabs">
+          <a ui-sref="population.world" class="tabnav-tab" ng-class="{ 'selected': populationCtrl.currentTab=='world' }" ng-click="populationCtrl.currentTab='world'" >World Population</a>
+          <a ui-sref="population.country" class="tabnav-tab" ng-class="{ 'selected': populationCtrl.currentTab=='country' }" ng-click="populationCtrl.currentTab='country'">Country Wise Population</a>
+        </nav>
+        <span ui-view></span>
+      </div>
+</div>
